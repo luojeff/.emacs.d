@@ -1,0 +1,43 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("c:/Users/luoje/Documents/GitHub/MKS22X-HW/" . "08Merge/")
+ ("c:/Users/luoje/Documents/GitHub/" . "MKS22X-HW/")
+ ("c:/Users/luoje/Documents/" . "GitHub/")
+ ("c:/Users/luoje/" . "Documents/")
+ ("c:/Users/" . "luoje/")
+ ("c:/" . "Users/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "c:/Users/luoje/Documents/GitHub/MKS22X-HW/08Merge/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "Merge.java"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("c:/Users/luoje/Documents/GitHub/MKS22X-HW/08Merge/" (22742 60496 0 0) "Merge.java" "Merge.class" "../" "./")
+
+ ("c:/Users/luoje/Documents/GitHub/MKS22X-HW/" (22741 26093 0 0) "README.md" "EC01/" "08Merge/" "07Quick/" "06QuizRedux/" "05USACO/" "04Maze/" "03KnightBoard/" "02NQueens/" "01Recursion/" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/luoje/Documents/GitHub/" (22741 57177 0 0) "Other-Proj/" "MKS22X-HW-Eclipse/" "MKS22X-HW/" "MKS21X/" "APCS1-Final-Project/" ".git/" "../" "./")
+
+ ("c:/Users/luoje/Documents/" (22729 36850 0 0) "R/" "OneNote Notebooks/" "My Videos/" "My Pictures/" "My Music/" "MATLAB/" "GitHub/" "desktop.ini" "Custom Office Templates/" ".Rhistory" "../" "./")
+
+ ("c:/Users/luoje/" (22734 50922 0 0) "Videos/" "Templates/" "Start Menu/" "SendTo/" "Searches/" "Saved Games/" "Recent/" "PrintHood/" "Pictures/" "OneDrive/" "ntuser.ini" "NTUSER.DAT{86af5fd0-bfd4-11e6-a66d-fb9b023c07cc}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{86af5fd0-bfd4-11e6-a66d-fb9b023c07cc}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{86af5fd0-bfd4-11e6-a66d-fb9b023c07cc}.TM.blf" "NTUSER.DAT{86af5fcf-bfd4-11e6-a66d-fb9b023c07cc}.TxR.blf" "NTUSER.DAT{86af5fcf-bfd4-11e6-a66d-fb9b023c07cc}.TxR.2.regtrans-ms" "NTUSER.DAT{86af5fcf-bfd4-11e6-a66d-fb9b023c07cc}.TxR.1.regtrans-ms" "NTUSER.DAT{86af5fcf-bfd4-11e6-a66d-fb9b023c07cc}.TxR.0.regtrans-ms" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "Local Settings/" "Links/" "IntelGraphicsProfiles/" "Favorites/" "eclipse/" "Downloads/" "Documents/" "Desktop/" "Cookies/" "Contacts/" "Application Data/" "AppData/" ".viminfo" ".tooling/" ".subversion/" ".ssh/" ".p2/" ".idlerc/" ".gnupg/" ".gitconfig" ".emacs.d/" ".eclipse/" ".bash_history" "../" "./")
+
+ ("c:/Users/" (22605 59257 0 0) "Public/" "luoje/" "desktop.ini" "defaultuser0/" "Default User/" "Default/" "All Users/" "../" "./")
+
+ ("c:/emacs-25.1-2-i686-w64-mingw32/" (22621 60605 0 0) "var/" "share/" "libexec/" "bin/" "../" "./")
+
+ ("c:/emacs-25.1-2-i686-w64-mingw32/bin/" (22621 60643 0 0) "runemacs.exe" "libXpm-nox4.dll" "etags.exe" "emacsclientw.exe" "emacsclient.exe" "emacs.exe" "emacs-25.1.exe" "ebrowse.exe" "ctags.exe" "addpm.exe" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

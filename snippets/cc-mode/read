@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: read
+# key: read
+# --
+${1:char} ${2:buffer}[$3];
+read(${4:fd}, $2, sizeof($2));
+$0

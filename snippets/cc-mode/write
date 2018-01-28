@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: write
+# key: write
+# --
+write(${1:fd}, ${2:buffer}, sizeof($2));
+$0

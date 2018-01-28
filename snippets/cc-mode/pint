@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: pint
+# key: pint
+# --
+
+printf("%d\n",$1);

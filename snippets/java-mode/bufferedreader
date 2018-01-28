@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: bufferedreader
+# key: bufferedreader
+# --
+import java.io.*;
+
+try{
+    File file = new File("${1:filename}");
+    BufferedReader br = new BufferedReader(new FileReader(file));
+
+    String contents = "";
+    String line;
+
+    while ((line = br.readLine()) != null) {
+        contents += line;
+    }
+
+} catch (IOException e){
+    ${2:e.printStackTrace()};
+}

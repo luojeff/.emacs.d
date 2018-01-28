@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: rand
+# key: rand
+# --
+import java.util.Random;
+
+Random r = new Random();
+${1:int} ${2:randInt} = r.${3:nextInt()};

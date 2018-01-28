@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: time
+# key: time
+# --
+long startTime = System.nanoTime();
+
+$0
+
+long endTime = System.nanoTime();
+long elapsedTimeMS = (endTime - startTime)/(long)Math.pow(10,6);
+System.out.println("Time: " +  elapsedTimeMS + "ms");	
