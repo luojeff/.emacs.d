@@ -2,5 +2,5 @@
 # name: open
 # key: open
 # --
-int ${fd} = open(${"filename"}, ${O_CREAT | O_RDWR}, ${0644});
+int ${fd} = open("${filename}", ${O_CREAT | O_RDWR}, ${0644});
 $0
