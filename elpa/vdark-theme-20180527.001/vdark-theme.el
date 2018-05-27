@@ -1,68 +1,70 @@
-;; custom-colors-theme.el --- custom-colors Theme
+;; vdark-theme.el --- VDark Theme
 
 ;; Copyright 2017-present, All rights reserved
 ;; Code licensed under the MIT license
 
 ;; Author: luoje
 
-;;; Code:
-
-(deftheme custom-colors)
+(deftheme vdark)
 
 (let ((class '((class color) (min-colors 89)))
-      (fg1 "#f8f8f2")
-      (fg2 "#e2e2dc")
-      (fg3 "#ccccc7")
-      (fg4 "#b6b6b2")
-      (bg1 "#282a36")
-      (bg2 "#373844")
-      (bg3 "#464752")
-      (bg4 "#565761")
-      (bg5 "#44475a")
-      (active-frame-border "#999999")
-      (inactive-frame-border "#555555")
+      (fg1 "#000000")
+      (fg2 "#000000")
+      (fg3 "#000000")
+      (fg4 "#000000")
+      (fg5 "#F9F9F9")
+      (bg1 "#F9F9F9")
+      (bg2 "#F9F9F9")
+      (bg3 "#F9F9F9")
+      (bg4 "#000000")
+      (bg5 "#F9F9F9")      
+      (active-frame-border "#CCCCCC")
+      (inactive-frame-border "#DDDDDD")
       (key2 "#0189cc")
       (key3 "#ff79c6")
-      (builtin "#ffb86c")
-      (keyword "#ff79c6")
-      (const   "#8be9fd")
-      (comment "#969E99")
-      (func    "#50fa7b")
-      (str     "#f1fa8c")
-      (type    "#bd93f9")
-      (var     "#f8f8f2")
-      (warning "#ffb86c")
-      (rainbow-1 "#f8f8f2")
-      (rainbow-2 "#8be9fd")
-      (rainbow-3 "#bd93f9")
-      (rainbow-4 "#ff79c6")
-      (rainbow-5 "#ffb86c")
-      (rainbow-6 "#50fa7b")
-      (rainbow-7 "#f1fa8c") ;; highlight
-      (rainbow-8 "#0189cc")
-      (rainbow-9 "#ff5555")
-	  (text-highlight "#c1c4b2")
+      (builtin "#000000")
+      (keyword "#000000")
+      (const   "#000000")
+      (comment "#000000")
+      (func    "#000000")
+      (str     "#000000")
+      (type    "#000000")
+      (var     "#000000")
+      (warning "#000000")
+      (rainbow-1 "#000000")
+      (rainbow-2 "#000000")
+      (rainbow-3 "#000000")
+      (rainbow-4 "#000000")
+      (rainbow-5 "#000000")
+      (rainbow-6 "#000000")
+      (rainbow-7 "#99CCFF") ;; highlight
+      (rainbow-8 "#000000")
+      (rainbow-9 "#000000")
+      (text-highlight "#99CCFF")
       (eph-verbatim "#f1fa8c")
       (eph-code "#ff79c6"))
 
   (custom-theme-set-faces 
-   'custom-colors
+   'vdark
    ;; default
    `(cursor ((,class (:background ,fg3))))
    `(default ((((type nil)) (:background "#000000" :foreground ,fg1))
-             (,class (:background, bg1 :foreground ,fg1))))
+	      (,class (:background, bg1 :foreground ,fg1))))
    `(default-italic ((,class (:italic t))))
    `(ffap ((,class (:foreground ,fg4))))
-   `(fringe ((,class (:background ,bg1 :foreground ,fg4))))
+   `(fringe ((,class (:background ,bg1 :foreground ,fg5))))
    `(highlight ((,class (:foreground ,fg3 :background ,bg3))))
    `(hl-line ((,class (:background  ,bg5))))
    `(info-quoted-name ((,class (:foreground ,builtin))))
    `(info-string ((,class (:foreground ,str))))
    `(lazy-highlight ((,class (:foreground ,fg2 :background ,bg3))))
    `(link ((,class (:foreground ,const :underline t))))
-   ;;`(linum ((,class (:slant italic :foreground ,bg4 :background ,bg1))))
-   `(linum )
+   `(linum ((,class (:slant italic :foreground ,bg4 :background ,bg1))))
    `(minibuffer-prompt ((,class (:bold t :foreground ,keyword))))
+   `(mode-line-inactive
+     ((t (:foreground ,
+                      :background ,bg3
+                      :box (:line-width -1 :style released-button)))))
    `(region ((,class (:background ,text-highlight :foreground ,bg1))))
    `(show-paren-match-face ((,class (:background ,warning))))
    `(trailing-whitespace ((,class :foreground nil :background ,warning)))
@@ -71,7 +73,7 @@
    `(whitespace-trailing ((,class :inherit trailing-whitespace)))
    ;; syntax
    `(font-lock-builtin-face ((,class (:foreground ,builtin))))
-   `(font-lock-comment-face ((,class (:foreground ,comment :slant italic))))
+   `(font-lock-comment-face ((,class (:foreground ,comment))))
    `(font-lock-constant-face ((,class (:foreground ,const))))
    `(font-lock-doc-face ((,class (:foreground ,comment))))
    `(font-lock-function-name-face ((,class (:foreground ,func :bold t))))
@@ -411,7 +413,7 @@
    `(icicle-common-match-highlight-Completions ((,class (:foreground ,type))))
    `(icicle-candidate-part                     ((,class (:foreground ,var))))
    `(icicle-annotation                         ((,class (:foreground ,fg4))))
-  ))
+   ))
 
 
 ;;;###autoload
@@ -419,10 +421,10 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'custom-colors)
+(provide-theme 'vdark)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; custom-colors-theme.el ends here
+;;; vdark-theme.el ends here
