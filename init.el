@@ -4,6 +4,7 @@
              '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
 
+(require 'linum)
 (require 'auto-complete)
 (require 'smartparens-config)
 (require 'multiple-cursors)
@@ -11,15 +12,40 @@
 
 ;; Basic customization
 ;;(smartparens-global-mode t)
-(set-default-font "Consolas-12")
+(set-default-font "Monospace-12")
+(setq linum-disabled-modes-list '(eshell-mode
+				  wl-summary-mode
+				  compilation-mode
+				  dired-mode
+				  speedbar-mode
+				  doc-view-mode))
+
 (global-linum-mode t)
-(setq make-backup-files nil)
 (global-auto-complete-mode t)
+(setq make-backup-files nil)
 (setq ac-delay 0.5)
+(setq-default visible-bell 1)
+(setq-default indent-tabs-mode nil)
+(setq-default show-paren-mode 1)
+(setq-default linum-format "%4d ")
+(setq-default visual-line-fringe-indicators '(nil nil))
+(setq-default word-wrap t)
+(setq-default column-number-mode t)
+(show-paren-mode 1)
+(delete-selection-mode 1)
 (yas-global-mode 1)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+
+;; UTF-8 everywhere
+(prefer-coding-system 'utf-8)
+(set-language-environment 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
 
 
 ;; Keybinds
@@ -64,18 +90,25 @@
  ;; If there is more than one, they won't work right.
  )
 
-(require 'linum)
-(defun linum-update-window-scale-fix (win)
-  "fix linum for scaled text"
-  (set-window-margins win
-          (ceiling (* (if (boundp 'text-scale-mode-step)
-                  (expt text-scale-mode-step
-                    text-scale-mode-amount) 1)
-              (if (car (window-margins))
-                  (car (window-margins)) 1)
-              ))))
-(advice-add #'linum-update-window :after #'linum-update-window-scale-fix)
- 
+;;(defun linum-update-window-scale-fix (win)
+;;"fix linum for scaled text"
+;;(set-window-margins win
+;;(ceiling (* (if (boundp 'text-scale-mode-step)
+;;(expt text-scale-mode-step
+;;text-scale-mode-amount) 1)
+;;(if (car (window-margins))
+;;(car (window-margins)) 1)
+;;))))
+;;(advice-add #'linum-update-window :after #'linum-update-window-scale-fix)
+
+;; scroll one line at a time (less "jumpy" than defaults)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq scroll-step 1) ;; keyboard scroll one line at a time
 
 (load-theme 'custom-colors t)
 (setq inhibit-startup-screen t)
+
+(add-to-list 'initial-frame-alist '(width . 88))
+(add-to-list 'default-frame-alist '(width . 88))
